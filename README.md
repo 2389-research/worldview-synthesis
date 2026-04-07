@@ -5,6 +5,7 @@ Surface your beliefs, identify the tensions between them, and generate narrative
 ## Installation
 
 ```bash
+/plugin marketplace add 2389-research/claude-plugins
 /plugin install worldview-synthesis@2389-research
 ```
 
