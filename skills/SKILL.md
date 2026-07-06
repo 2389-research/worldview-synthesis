@@ -1,6 +1,6 @@
 ---
 name: worldview-synthesis
-description: This skill should be used when someone wants to articulate, explore, or document their personal worldview, values, or philosophy. Triggers on "articulate my values", "figure out what I believe", "document my philosophy", "write a manifesto", "define my leadership philosophy", "explore my beliefs". Surfaces beliefs through systematic interrogation, identifies tensions, and generates narrative outputs.
+description: Articulates and documents a personal worldview—beliefs, values, and tensions—into structured YAML data and narrative outputs (mission, thesis, essay). Use when someone wants to articulate their values, explore what they believe, document their philosophy, write a manifesto, or define a leadership philosophy; triggers on phrases like "articulate my values", "figure out what I believe", "document my philosophy", "write a manifesto", "explore my beliefs", "define my leadership philosophy".
 ---
 
 # Worldview Synthesis
@@ -107,19 +107,7 @@ A worldview is living. Add new beliefs, update old ones, regenerate narratives.
 
 ## Idea Node Schema
 
-```yaml
-- id: kebab-case-unique-id
-  title: "Human Readable Title"
-  domain: personal | ethics | society | technology | metaphysics
-  claim: "The actual belief in one clear sentence"
-  confidence: 0.0-1.0  # how sure?
-  importance: 0.0-1.0  # how central to worldview?
-  tags: [relevant, keywords]
-  sources: [source-ids-if-any]
-  supports: [ideas-this-reinforces]
-  tensions: [ideas-this-contradicts]
-  notes: "Context, caveats, origins"
-```
+For the canonical schema definition (Idea, Source, Tension types with all fields and enums), see [`references/schema.yaml`](references/schema.yaml).
 
 ## Tension Statuses
 
@@ -129,30 +117,7 @@ A worldview is living. Add new beliefs, update old ones, regenerate narratives.
 
 ## Sample Interrogation Round
 
-```
-Round 3: Money, Competition, Trust
-
-Q1: How do you think about money beyond 'spend it'?
-- Tool for freedom: Money buys optionality and autonomy
-- Obligation to share: If you have more, redistribute
-- Wealth is suspect: Getting rich usually means exploitation
-- Generational thinking: Think about what to leave behind
-[multiSelect: true]
-
-Q2: What's your orientation toward competition?
-- Compete hard, play fair: Want to win but not by cheating
-- Collaboration over competition: Prefer positive-sum games
-- Against yourself mostly: Real competition is self-improvement
-- Strategic ruthlessness: Sometimes you have to crush opponents
-[multiSelect: true]
-
-Q3: How do you approach trust with new people?
-- Trust until betrayed: Default open, pull back if needed
-- Trust is earned: Start cautious, let people prove themselves
-- Read the situation: Neither default—assess individually
-- Trust systems not people: Rely on structures over character
-[multiSelect: false]
-```
+For the full 6-round question bank (covering Foundations, Body & Pleasure, Relationships & Learning, Emotion & Recognition, Work & Ethics, Society & Future), see [`references/interrogation-questions.md`](references/interrogation-questions.md). Each question includes multi-select options with descriptions ready for the AskUserQuestion tool.
 
 ## Red Flags
 
@@ -190,3 +155,8 @@ We extend grace for pain, never for harm.
 
 People first. Always.
 ```
+
+## Reference Materials
+
+- **Full 6-round question bank:** [`references/interrogation-questions.md`](references/interrogation-questions.md) — ready-to-use questions across all domains, formatted for AskUserQuestion.
+- **Canonical entry schema:** [`references/schema.yaml`](references/schema.yaml) — type definitions for Idea, Source, and Tension nodes including all field names and enums.

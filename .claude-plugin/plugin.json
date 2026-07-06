@@ -1,5 +1,6 @@
 {
   "name": "worldview-synthesis",
   "description": "Systematic worldview articulation - surface beliefs, identify tensions, generate narrative outputs for personal philosophy documentation",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "keywords": ["worldview", "philosophy", "values", "beliefs", "manifesto"]
 }
